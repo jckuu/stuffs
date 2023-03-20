@@ -1,0 +1,19 @@
+public void Update()
+{
+	using (UserDataContext context = new UserDataContext())
+	{
+		User selectedUser = ItemList.SelectedItem as User;
+		
+		//create variables (username, email, password)
+		
+		if(username != null && email != null && password != null)
+		{
+			User user = context.Users.Find(selectedUser.Id);
+			user.Username = username;
+			user.Email = email;
+			user.Password = password;
+			
+			context.SaveChanges();
+		}
+	}
+}
