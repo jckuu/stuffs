@@ -1,0 +1,10 @@
+public void Create()
+{
+	using (UserDataContext context = new UserDataContext())
+	{
+		//create variables (username, email, password)
+
+		context.Users.Add(new User() { Username = name, Email = email, Password = password });
+		context.SaveChanges();
+	}
+}
