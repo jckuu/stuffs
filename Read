@@ -1,0 +1,8 @@
+public void Read()
+{
+	using (UserDataContext context = new UserDataContext())
+	{
+		DatabaseUsers = context.Users.ToList();
+		ItemList.ItemsSource = DatabaseUsers;
+	}
+}
