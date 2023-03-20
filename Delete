@@ -1,0 +1,15 @@
+public void Delete()
+{
+	using (UserDataContext context = new UserDataContext())
+	{
+		User selectedUser = ItemList.SelectedItem as User;
+		
+		if(selectedUser != null)
+		{
+			User user = context.Users.Find(selectedUser.Id);
+			
+			context.Remove(user);
+			context.SaveChanges();
+		}
+	}
+}
