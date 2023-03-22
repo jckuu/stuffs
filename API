@@ -3,11 +3,12 @@
 
 //WeatherInfo Class
 {
-  //Weather Class (public property) - main, description, icon (strings)
-  //Main Class (public property) - temp, pressure, humidity (doubles)
-  //Wind Class (public property) - speed (double)
-  //Sys Class (public property) - sunrise, sunset (long)
-  //Root class (public property) - coord (coord), weather (list), main (main), wind (wind), sys (sys)
+//CREATE THESE CLASSES (PUBLIC PROPERTIES INSIDE)
+  //Weather Class - main, description, icon (strings)
+  //Main Class - temp, pressure, humidity (doubles)
+  //Wind Class - speed (double)
+  //Sys Class - sunrise, sunset (long)
+  //Root Class - coord (coord), weather (list), main (main), wind (wind), sys (sys)
 }
 
 //Homepage
