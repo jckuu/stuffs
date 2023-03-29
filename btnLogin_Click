@@ -1,0 +1,12 @@
+
+var userfound = context.Users.Any(user => user.Username == username);
+
+if(userfound)
+{
+  var loginUser = context.Users.FirstOrDefault(user => user.Userame = username);
+
+  if (HashPassword($"{password}{loginUser.Salt}") == loginUser.Password)
+  {
+    //Grant access
+  }
+}
