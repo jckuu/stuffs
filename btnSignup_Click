@@ -1,0 +1,6 @@
+using UserDataContext context = new UserDataContext();
+
+var salt = DateTime.Now.ToString();
+
+var HashedPsw = HashPassword($"{password}{salt}");
+//new User (change to HashedPsw)
