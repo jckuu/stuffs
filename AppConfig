@@ -2,10 +2,15 @@ using System.Configuration;
 
 Configuration AppConfig = ConfigurationManager.OpenExeConfguration(ConfigurationUserLevel.None);
 
-public //"classname"()
+string[] Themes = new string[] {"Dark", "Light"};
+
+public AccountSettings()
 {
   InitializeComponent();
   //Add class "UISettings"
+  
+  cmbThemes.ItemsSource = Themes;
+  
   if (AppConfig.Sections["UISettings"] is null)
   {
     AppConfig.Sections.Add("UISettings", new UISettings());
@@ -16,4 +21,9 @@ public //"classname"()
   this.DataContext = UISettingSection;
 }
 
+//In xaml file add "SelectedItem="{Binding Theme}"" to ComboBox (cmbThemes)
 
+//btnSave_Click
+{
+  AppConfig.Save();
+}
