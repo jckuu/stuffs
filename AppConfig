@@ -1,0 +1,11 @@
+using System.Configuration;
+
+Configuration AppConfig = ConfigurationManager.OpenExeConfguration(ConfigurationUserLevel.None);
+
+public //"classname"()
+{
+  InitializeComponent();
+  AppConfig.Sections.Add();
+}
+
+//Add class "UISettings"
